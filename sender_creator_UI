@@ -1,0 +1,20 @@
+# User interface of the Sender Creator
+
+import me_sender_creator_pkg
+import sender_creator_display
+
+def main():
+    # Enter the user id and name
+    user_id = input("Enter the user ID number: ")
+    user_name = input("Enter the user name: ")
+    # Create and save the user
+    user = me_sender_creator_pkg.me_sender_create(user_id, user_name)
+    # Display the icons and positions to the user
+    new_display = sender_creator_display.UserDisplay()
+    new_display.show_icon_position(user["icons"])
+    # Display the cell of the position-list to the user
+    new_display.show_cell(user["cell"])
+
+
+if __name__ == "__main__":
+    main()
