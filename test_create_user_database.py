@@ -26,5 +26,5 @@ def main():
     else:
         print("Good bye")
 
-if __name__ == main():
+if __name__ == "__main__":
     main()
