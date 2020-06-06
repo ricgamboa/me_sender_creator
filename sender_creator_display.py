@@ -113,7 +113,7 @@ class UserDisplay:
         with open(backgound_info_path) as background_info_json:
             background_info = json.load(background_info_json)
 
-        mask = mask_im = Image.new("L", tuple(background_info["icon_size"]), 0)
+        mask = Image.new("L", tuple(background_info["icon_size"]), 0)
         brush1 = ImageDraw.Draw(mask)
         brush1.ellipse((0, 0, background_info["icon_size"][0], background_info["icon_size"][1]), fill=255)
 
